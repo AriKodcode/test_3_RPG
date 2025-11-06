@@ -25,8 +25,11 @@ class Orc:
             dice6 += self.power
             self.update_orc()
             player.hp -= dice6
+            if player.hp <= 0:
+                return False
+            return True
         else:print("You missed the mark.")
-
+        return True
 
     def update_orc(self):
         if self.weapon == "knife":

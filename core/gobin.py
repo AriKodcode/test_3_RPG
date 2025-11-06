@@ -23,8 +23,12 @@ class Goblin:
             dice6 += self.power
             self.update_goblin()
             player.hp -= dice6
+            if player.hp <=0:
+                return False
+            return True
         else:
             print("You missed the mark.")
+        return True
 
     def update_goblin(self):
         if self.weapon == "knife":

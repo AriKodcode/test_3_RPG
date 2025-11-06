@@ -22,8 +22,11 @@ class Player:
             dice6 = Game.roll_dice(6)
             dice6 += self.power
             monster.hp -= dice6
+            if monster.hp <= 0:
+                return False
+            return True
         else: print("You missed the mark.")
-
+        return True
     def update_player(self):
         if self.profession == "warrior":
             self.power += 2

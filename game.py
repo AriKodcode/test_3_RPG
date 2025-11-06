@@ -32,7 +32,6 @@ class Game:
         if p_dice > m_dice:
             print("player its your turn")
             Player.attack(player,monster)
-
         else:
             print("monster its your turn")
             monster.attack(player)
